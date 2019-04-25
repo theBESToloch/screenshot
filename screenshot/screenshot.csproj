@@ -53,11 +53,11 @@
     <Compile Include="Screenshot.Designer.cs">
       <DependentUpon>Screenshot.cs</DependentUpon>
     </Compile>
-    <Compile Include="screen.cs">
+    <Compile Include="TransparentScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include=".Designer.cs">
-      <DependentUpon>screen.cs</DependentUpon>
+      <DependentUpon>TransparentScreen.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Program.cs" />
@@ -71,8 +71,8 @@
     <EmbeddedResource Include="Screenshot.resx">
       <DependentUpon>Screenshot.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="screen.resx">
-      <DependentUpon>screen.cs</DependentUpon>
+    <EmbeddedResource Include="TransparentScreen.resx">
+      <DependentUpon>TransparentScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

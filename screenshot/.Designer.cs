@@ -1,6 +1,6 @@
 ﻿namespace screenshot
 {
-    partial class screen
+    partial class TransparentScreen
     {
         /// <summary>
         /// Required designer variable.

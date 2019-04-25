@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace screenshot
 {
-    public partial class screen : Form
+    public partial class TransparentScreen : Form
     {
         private Bitmap printscreen, restangle;
         Graphics graphics;
         private Screenshot refForm;
         
 
-        public screen(Screen scr, Screenshot refForm)
+        public TransparentScreen(Screen scr, Screenshot refForm)
         {
             InitializeComponent();
             this.refForm = refForm;
@@ -26,15 +26,14 @@ namespace screenshot
             this.FormBorderStyle = FormBorderStyle.None;
             this.AllowTransparency = true;
             
-            this.TransparencyKey = this.BackColor;//он же будет заменен на прозрачный цвет
+            this.TransparencyKey = this.BackColor; //он же будет заменен на прозрачный цвет
+
             printscreen = new Bitmap(scr.Bounds.Width , scr.Bounds.Height);
-
-            
-
             graphics = Graphics.FromImage(printscreen as Image);
             graphics.CopyFromScreen(scr.Bounds.X, scr.Bounds.Y, 0, 0, printscreen.Size);
             pictureBox1.BackgroundImage = printscreen;
             graphics.Dispose();
+
             restangle = new Bitmap(scr.Bounds.Width, scr.Bounds.Height);
             graphics = Graphics.FromImage(restangle);
         }
